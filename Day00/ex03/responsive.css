@@ -1,0 +1,55 @@
+h1{
+	text-align: center;
+}
+div{
+	text-align: left;
+}
+body{
+	background-color: #857FB1;
+}
+img{
+	height:300px;
+	width:300px;
+}
+.container {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(18, 5vw);
+	grid-template-rows: repeat(8, 5vw);
+}
+.container2 {
+	display: grid;
+	justify-content: right;
+	grid-template-columns: repeat(15, 5vw);
+	grid-template-rows: repeat(2, 5vw);
+}
+
+.grid-item {
+	display: grid;
+	background-color: #D2CEF3;
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	grid-template: '. . header'
+					'. main .'
+					'footer . .';
+}
+.element_atomic_mass
+{
+	grid-area: header;
+	font-size: .6vw;
+	text-align: left;
+}
+.element_info_letter
+{
+	grid-area: main;
+	font-weight: bold;
+	align-self: center;
+	text-align: center;
+	justify-content: center;
+	font-size: 1.5vw;
+}
+.element_info_number
+{
+	grid-area: footer;
+	text-align: center;
+	font-size: 1vw;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title>beep beep math things</title>
+    <style>
+        body {
+            background: gray;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+    <script>
+    window.onload = function () {
+            setInterval("alert('Please, use me...')", 30000)
+    }
+    function validate(form){
+        var left = form.elements["left"].value;
+        var right = form.elements["right"].value;
+        var select = form.elements["select"].value;
+        if (left < 0 || right < 0)
+            alert('Error');
+        else{
+
+        }
+
+
+
+    }
+    </script>
+</head>
+<body>
+    <h1>This is my calculator</h1>
+    <input type="text" id="right-number" placeholder="">
+    <select id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="right-number" placeholder="">
+    <input type="text" id="result" placeholder="result will be here">
+    <input type="submit" value="Try me!" id="submittomebutton">   
+    <h1>It does things</h1>
+    </div>
+</body>
+</html>

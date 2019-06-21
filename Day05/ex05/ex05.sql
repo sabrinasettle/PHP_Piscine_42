@@ -1,0 +1,1 @@
+DELETE FROM db_ssettle.ft_table LIMIT 5;
