@@ -1,0 +1,28 @@
+
+Docker Machine Creation:
+1. docker-machine create 'anyName'
+
+2.eval $(docker-machine env 'anyName')
+
+3.docker volume create --driver local --name=hatchery
+
+4.docker run -d --restart=on-failure -v hatchery:/var/lib/mysql --name=mysql_server -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=ft_'CurrentUser' mysql --default-authentication-plugin=mysql_native_password
+
+5.docker run -d --restart=on-failure --name=php_server -p 8081:80 --link=mysql_server:mysql -e PMA_HOST=mysql_server phpmyadmin/phpmyadmin
+
+you can then use this command to enter the machine.
+    docker exec -it mysql_server bash
+    
+    mysql -p: password
+
+you can then go to address enter phpmyadmin.
+    `http://"192.168.99.100":8081` 
+address is equivalent to docker-machine ip 'anyName' + phpmyadmin port. 
+
+
+
+
+Use after the fact:
+1.docker-machine start anyName
+
+2.eval $(docker-machine env 'anyName')
